@@ -52,7 +52,6 @@ code{
     border: black 1px solid;
     border-radius: 10px;
     font-size: 18px;
-    
 }
 img{
     display: block;
@@ -62,4 +61,39 @@ img{
     margin-top: 30px;
     margin-left: 12%;
     font-weight: normal;
+}
+.dicaDeOuro{
+    display: block;
+    background-color: rgb(244, 247, 115);
+    width: 70%;
+    margin-left: 12%;
+    padding: 15px 30px;
+    border: black 1px solid;
+    border-top: 30px;
+    border-radius: 10px;
+    font-size: 18px;   
+}
+.titutloDicaDeOuro{
+    margin: 0;
+    color: red;
+}
+.subTitutloDicaDeOuro{
+    margin: 1%;
+    color: darkgoldenrod;
+}
+.paragrafoDicaDeOuro{
+    margin: 2%;
+    width: 80%;
+    text-align: justify;
+    text-justify: auto;
+}
+.exemplo{
+    display: block;
+    background-color: rgb(202, 247, 232);
+    width: 100%;
+    margin: 10px auto;
+    padding: 15px 30px;
+    border: black 1px solid;
+    border-radius: 10px;
+    font-size: 18px;
 }
