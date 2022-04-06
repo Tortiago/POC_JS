@@ -12,6 +12,7 @@
     <body>
         <h1>Lógica de programação com Javascript</h1>
 
+        <!--
         <section>
             <h2>Aula - 00?</h2>
             <h3>Assunto ...</h3>
@@ -29,14 +30,237 @@
                 <br>&lt;/script&gt;
             </code>
         </section>
+        -->
+
+
+
+
+
+        <section>
+            <h2>Aula - 004</h2>
+            <h3>Operadores aritméticos - Módulo (Resto da divisão)</h3>            
+
+            <code>
+                &lt;script&gt;
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                    //apresentar o resto da divisão de dois numeros
+                    
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                    var num1 = parseInt(prompt("Digite o primeiro número da divisão:"));
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                    var num2 = parseInt(prompt("Digite o segundo número da divisão:"));
+                    
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                    var restoDivisao = num1 % num2;
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                    alert(restoDivisao);
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                <br>&lt;/script&gt;
+            </code>
+
+            <h3>Operadores aritméticos - Exponenciação</h3>
+
+            <code>
+                &lt;script&gt;
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                    //apresentar a exponeciação de dois numeros
+                    
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                    var num1 = parseInt(prompt("Digite o primeiro número:"));
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                    var num2 = parseInt(prompt("Digite o segundo número:"));
+                    
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                    var exponeciacao = num1 ** num2;
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                    alert(exponeciacao);
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                <br>&lt;/script&gt;
+            </code>
+
+        </section>
+
+        
+
+
+
+
+
+        <section>
+            <h2>Aula - 003</h2>
+            <h3>Operadores aritméticos - Prioridade entre tipos de operações</h3>
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>Símbolo</th>
+                        <th>Descrição</th>
+                    </tr>
+                </thead>
+
+                <tbody class="tableOperadores">
+                    <tr>
+                        <th>+</th>
+                        <th>Adição (soma)</th>
+                    </tr>
+
+                    <tr>
+                        <th>-</th>
+                        <th>Subtração</th>
+                    </tr>
+                    
+                    <tr>
+                        <th>*</th>
+                        <th>Multiplicação</th>
+                    </tr>
+                    <tr>
+                        <th>/</th>
+                        <th>Divisão</th>
+                    </tr>
+                    <tr>
+                        <th>%</th>
+                        <th>Módulo</th>
+                    </tr>
+                    <tr>
+                        <th>**</th>
+                        <th>Exponenciação</th>
+                    </tr>
+                    <tr>
+                        <th>++</th>
+                        <th>Incremento</th>
+                    </tr>
+                    <tr>
+                        <th>--</th>
+                        <th>Decremento</th>
+                    </tr>
+
+                </tbody>
+            </table>
+
+            <article class="dicaDeOuro">
+                <h3 class="titutloDicaDeOuro">Importante:</h3>
+                <p class="paragrafoDicaDeOuro">
+                    Os operadores "Multiplicação/Divisão" tem prioridade sobre os operadores "Soma/Subtração" 
+                </p>
+                <h4 class="subTitutloDicaDeOuro">Lembrete:</h4>
+                <p class="paragrafoDicaDeOuro">
+                    Em situações onde há mais de uma operação aritmética acontecendo, 
+                    deve-se atentar na prioridade de cada uma.
+                    <br>
+                    Exemplo: var media = n1 + n2 / 2;
+                    <br>
+                    Neste caso primeiro será realizado a divisão pois esta operação tem prioridade sobre a operação de soma.
+                    <br>
+                    Para corrigir use parenteses dessa forma:
+                    <br>
+                    var media = (n1 + n2) / 2;
+                    <br>
+                    Assim, primeiro são resolvidas as expressões mais encapsuladas até chegar no menor nível de encapsulamento.
+                </p>
+
+            </article>
+
+            <code>
+                &lt;script&gt;
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                    //pedir para o usuario digitar dois numero
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                    var num1 = parseFloat(prompt("Digite o primeiro número"));
+        
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                    var num2 = parseFloat(prompt("Digite o segundo número"));
+
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                    var media = (num1 + num2) / 2;
+
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                    alert("A média é: " + media);
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                <br>&lt;/script&gt;
+            </code>
+        </section>
+
+
+
+
+
+        <section>
+            <h2>Bonus game - Exercício</h2>
+            <h3>Aula 02.02</h3>
+
+            <code>
+                &lt;script&gt;
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                    //pedir para o usuario digitar um numero
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                    var num1 = prompt("Digite um número:");
+
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;                                            
+                    //converter em numero inteiro
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                    num1 = parseInt(num1);
+                    
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                    //pedir para o usuario digitar outro numero
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                    var num2 = prompt("Digite mais um número:");
+                                
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                    //converter em numero inteiro
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                    num2 = parseInt(num2);            
+                    
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                    //mostrar a subtração concatenando com o texto "a subtração é: ..."
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                    alert("A subtração é: " + (num1-num2));
+                                
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                    //mostrar a multiplicação concatenando com o texto "a multiplicação é: ..."
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                    alert("A multiplixação é: " + (num1*num2));
+                                
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                    //mostrar a divisão concatenando com o texto "a divisão é: ..."
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                    alert("A divisão é: " + (num1/num2));
+                                
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                    //mostrar a soma concatenando com o texto "a soma é: ..."
+                    <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                    alert("A soma é: " + (num1+num2));
+                    <br>
+                <br>&lt;/script&gt;
+            </code>
+        </section>
+
+
+
+
+
 
         <section>
             <h2>Aula - 002</h2>
             <h3>Converter "String" em inteiro</h3>
-
-            <p>
-
-            </p>
 
             <code>
                 &lt;script&gt;
@@ -61,36 +285,55 @@
                     <br>&nbsp;&nbsp;&nbsp;&nbsp;
                     alert(num1 + num2);
                 <br>&lt;/script&gt;
-            </code>
+            </code><br>&nbsp;&nbsp;&nbsp;&nbsp;
+
 
             <article class="dicaDeOuro">
                 <h3 class="titutloDicaDeOuro">Importante:</h3>
 
                 <h4 class="subTitutloDicaDeOuro">Lembrete:</h4>
                 <p class="paragrafoDicaDeOuro">
-                    Todo conteúdo (dado) enviado pelo usuário via interface, 
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    1 - Todo conteúdo (dado) enviado pelo usuário via interface, 
                     sempre iremos receber como uma "String", portanto nas situações 
                     em que estivermos trabalhando com números devemos sempre 
-                    realizar conversões.
+                    realizar conversões para o tipo necessário.
+                </p>
+
+                <p class="paragrafoDicaDeOuro">
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    2 - Na conversão o comando "parseInt()" sempre descarta os valores decimais,
+                    <br><strong>IMPORTENTE</strong> não é um arredondamento e sim o descarte dos decimais.
+
+
                 </p>
 
                 <h4 class="subTitutloDicaDeOuro">Dica de Ouro:</h4>
                 <p class="paragrafoDicaDeOuro">
+                    &nbsp;&nbsp;&nbsp;&nbsp;
                     Para identificar o tipo do dado que estamos trabalhando use o comando 
                     'typeof' seguido do nome da variável.
                     <code class="exemplo">
                         Exemplo: <br>
                         &lt;script&gt;    
-                            <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                            
                             // Identificar o tipo do dado que estamos trabalhando
                             <br>&nbsp;&nbsp;&nbsp;&nbsp;
-                            alert(typeof num1);
+                            var valor = prompt("Digite um número:");
+                            <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                            alert(typeof valor);
                         <br>&lt;/script&gt;
                         
                         <br><br>Resultado:
-                        <br>var valor = prompt("Digite um número:");
+                        
+                        <br><br>&nbsp;&nbsp;&nbsp;&nbsp;
+                        var valor = prompt("Digite um número:");
+                        <br><br>
                         <img src="img/aula002_img01_DigiteUmNumero.png"> 
-                        <br>alert(typeof valor);
+                        
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                        alert(typeof valor);
+                        <br><br>
                         <img src="img/aula002_img02_TipoDoDado.png">
 
                     </code>
@@ -99,6 +342,10 @@
 
             </article>
         </section>
+
+
+
+
 
         <section>
             <h2>Aula - 001</h2>
@@ -156,10 +403,10 @@
             <article>
                 <p>Resultado:</p>
                 <p class="texto">prompt("Qual seu nome?");</p>
-                <img src="img/aula_001/alertComInsert.png">
+                <img src="img/aula001_img01_alertComInsert.png">
                 
                 <p class="texto">alert("Seja bem vindo " + nome);</p>
-                <img src="img/aula_001/alertInformaNomeUsuario.png">
+                <img src="img/aula001_img02_alertInformaNomeUsuario.png">
             </article>
 
             
