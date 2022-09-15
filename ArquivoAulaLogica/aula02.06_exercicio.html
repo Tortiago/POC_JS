@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lógica de programação Javascript</title>
+        <meta charset="uft-8">
+    </head>
+    <body>
+        <h1>Lógica de programação com Javascript</h1>
+
+        <p>
+            PROBLEMA: 
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;
+            Pedir para o usuário digitar dois números e mostrar uma mensagem
+            informando se foi aprovado ou não. Anota de corte é 5.
+            Caso alguma das notas for igual a zero é reprovado automaticamente.
+            Desafio = Usar a mesma estrutura e alterar o operador l=ogico de && (and) para || (or)
+        </p>
+
+        <script>
+            var n1 = parseInt(prompt("Digite a primeira nota:"));
+            var n2 = parseInt(prompt("Digite a segunda nota:"));
+            var media = (n1+n2)/2;
+            var mensagem = null;
+
+            if(
+                (n1 === 0) ||
+                (n2 === 0) ||
+                (media<=5)
+            ){
+                mensagem = "Que pena não foi dessa vez, continue tentando essa foi por pouco, estamos torcendo por você.";
+            }else{
+                mensagem = "Parabéns, você foi aprovado já pode comemorar, uhulllll !!!";
+            }
+            alert(mensagem);
+
+        </script>
+    </body>
+</html>

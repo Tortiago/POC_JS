@@ -21,16 +21,366 @@
 
             <code>
                 &lt;script&gt;
-                    <br>&nbsp;&nbsp;&nbsp;&nbsp;
-                    <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                    
+                    
                     //pedir para o usuário digitar o número
                     
-                    <br>&nbsp;&nbsp;&nbsp;&nbsp;
+                    
                     var num1 = parseInt(prompt("Digite o primeiro número da soma:"));
-                <br>&lt;/script&gt;
+                &lt;/script&gt;
             </code>
         </section>
         -->
+
+        <section>
+            <h2>Aula - 007</h2>
+            <h3>switch case</h3>
+
+            <code>
+                <span class="indentacao">
+                &lt;script&gt;
+                
+                    <span class="indentacao">
+                    while(n!=6){
+                    
+                        <span class="indentacao">
+                        var n = parseInt(prompt("Digite um número de 1 à 6:"));
+                        <br>
+                        var mensagem = "";
+                        <br><br>
+                        switch(n){
+
+                            <span class="indentacao">
+                            case 1:
+                                <span class="indentacao">
+                                    mensagem = "passou longe";
+                                    <br>
+                                    break;
+                                </span>
+                                
+                            case 2:
+                                <span class="indentacao">
+                                    mensagem = "continue tentando";
+                                    <br>
+                                    break;
+                                </span>
+                            
+                            case 3:
+                                <span class="indentacao">
+                                    mensagem = "uma hora dá certo, não desista";
+                                    <br>
+                                    break;
+                                </span>
+                            
+                            case 4: 
+                                <span class="indentacao">
+                                    mensagem = "já da pra sentir o gostinho da vitória";
+                                    <br>
+                                    break;
+                                </span>
+                            
+                            case 5: 
+                                <span class="indentacao">
+                                    mensagem = "essa foi por muito pouco, vamos lá estou torcendo por vc!";
+                                    <br>
+                                    break;
+                                </span>
+                            
+                            case 6: 
+                                <span class="indentacao">
+                                    mensagem = "nada como uma bela vitória pra alegrar o seu dia";
+                                    <br>
+                                    break;
+                                </span>
+
+                            default:
+                                <span class="indentacao">
+                                    mensagem = "digite um número de 1 à 6";
+                                    <br>
+                                    break;
+                                </span>
+                            </span>
+                        }
+                        <br><br>
+                        alert(mensagem);
+                        </span>
+                        <br>
+                    } 
+                    </span>
+                &lt;/script&gt;
+                </span>
+            </code>
+        </section>
+
+
+        <section>
+            <h2>Bonus game - Exercício</h2>
+            <h3>Aula 02.05</h3>
+
+            <p>Comentários</p>
+
+            <code>
+                <span class="indentacao">
+                &lt;script&gt;
+                    
+                    
+                    <span class="indentacao">
+                    <br>
+                    // fazer jogador1 digitar um numero
+                    <br>
+                    var j1 = parseInt(prompt("Jogador 1 - Digite um número:"));
+                    
+                    <br><br>
+                    // fazer jogador2 digitar outro numero
+                    <br>
+                    var j2 = parseInt(prompt("Jogador 2 - Digite um número:"));
+                    
+                    <br><br>                            
+                    // se forem iguais, mostrar mensagem 'empate'
+                    <br>
+                    var mensagem = "";
+                    
+                    <br><br>
+                    if(j1==j2){
+                        <span class="indentacao">
+                            mensagem = "Disputa empatada, tente novamente e boa sorte!";
+                        </span>
+                    }
+
+                    <br><br>
+                    // sortear um numero entre 0 e 1
+                    <br>
+                    // Math.trunc() é uma função para truncar as casas decimais 
+                    <br>
+                    var num = Math.trunc(Math.random()*2);
+                    
+                    <br><br>
+                    // Para desprezar os decimais faça um 'parseInt'
+                    <br>
+                    // (números inteiros não tem decimais, simples assim :-)
+                    <br>
+                    // var num = parseInt(Math.random()*2);
+
+                    <br><br>
+                    // se o numero sorteado for 0, ganha quem escolher o numero MENOR
+                    <br>
+                    if(num==0 && (j1&lt;j2)){
+                        <span class="indentacao">
+                            mensagem = "Jogador 1 ganhou!";
+                        </span>
+                    }else if(num==0 && (j2&lt;j1)){
+                        <span class="indentacao">
+                            mensagem = "Jagador 2 ganhou!";
+                        </span>
+                    }else 
+                    
+                    <br><br>
+                    // se o numero sorteado for 1, ganha quem escolher o numero MAIOR
+                    <br>
+                    if(num==1 && (j1>j2)){
+                        <span class="indentacao">
+                            mensagem = "Jogador 1 ganhou!";
+                        </span>
+                    }else if(num==1 && (j2>j1)){
+                        <span class="indentacao">
+                            mensagem = "Jagador 2 ganhou!";
+                        </span>
+                    }
+                    
+                    <br><br>
+                    alert(mensagem);
+                    </span>
+                <br>
+                &lt;/script&gt;
+                </span>
+            </code>
+        </section>
+
+
+
+        <section>
+            <h2>Aula - 006</h2>
+            <h3>Operadores de comparação</h3>
+            <p>
+                PROBLEMA: 
+                <br>
+                <span class="indentacao"> 
+                    Pedir para o usuário digitar dois números e mostrar uma mensagem
+                    informando se foi aprovado ou não.
+                    A nota de corte é 5.
+                </span>
+            </p>
+
+            <code>
+                <span class="indentacao">
+                &lt;script&gt;
+                    
+                    <span class="indentacao">
+                        var n1 = parseInt(prompt("Digite um número:"));
+                        <br>
+                        var n2 = parseInt(prompt("Digite outro número:"));
+                        <br>
+                        var media = (n1+n2)/2;
+                        <br>
+                        var mensagem = null;
+                        
+                        <br><br>
+                        if(media>5){
+                            <span class="indentacao">
+                                mensagem = "Parabéns, você foi aprovado já pode comemorar, uhulllll !!!";
+                            </span>
+                        }else{
+                            <span class="indentacao">
+                                mensagem = "Que pena não foi dessa vez, continue tentando essa foi por pouco, 
+                                <br>
+                                estamos torcendo por você.";
+                            </span>
+                        }
+                        <br><br>
+                        alert(mensagem);
+                    </span>
+
+                &lt;/script&gt;
+                </span>
+            </code>
+        </section>
+
+
+
+
+        <section>
+            <h2>Aula - 005</h2>
+            <h3>Operadores de comparação</h3>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Operador</th>
+                        <th>Descrição</th>
+                    </tr>
+                </thead>
+           
+                <tbody>
+                    <tr>
+                        <th>==</th>
+                        <th>Igualdade (Valor)</th>
+                    </tr>
+
+                    <tr>
+                        <th>!=</th>
+                        <th>Diferente (Valor)</th>
+                    </tr>
+
+                    <tr>
+                        <th>===</th>
+                        <th>Igualdade (Valor e tipo)</th>
+                    </tr>
+
+                    <tr>
+                        <th>!==</th>
+                        <th>Diferente (Valor e tipo)</th>
+                    </tr>
+
+                    <tr>
+                        <th>></th>
+                        <th>Maior</th>
+                    </tr>
+
+                    <tr>
+                        <th>>=</th>
+                        <th>Maior ou igual</th>
+                    </tr>
+
+                    <tr>
+                        <th>&lt;</th>
+                        <th>Menor</th>
+                    </tr>
+
+                    <tr>
+                        <th>&lt;=</th>
+                        <th>Menor ou igual</th>
+                    </tr>
+
+                </tbody>
+
+           </table>
+
+           <p>
+                PROBLEMA: 
+                <span class="indentacao">
+                    Pedir para o usuário digitar dois números e mostrar um boolean indicando se a média for maior que 5
+                </span>
+            </p>
+
+            <code>
+                <span class="indentacao">
+                &lt;script&gt;
+                    
+                    <span class="indentacao">    
+                        var n1 = parseInt(prompt("Digite um número:"));
+                        <br>
+                        var n2 = parseInt(prompt("Digite outro número:"));
+                        <br>
+                        var media = (n1+n2)/2;
+                        <br>
+                        var verdade = media>5;
+                        <br><br>
+                        alert("A média de " + n1 + " e " + n2 + " é maior do que 5? ... " + verdade);
+                    </span>
+                &lt;/script&gt;
+                </span>
+            </code>
+        </section>
+
+
+
+
+
+
+        <section>
+            <h2>Bonus game - Exercício</h2>
+            <h3>Aula 02.03</h3>
+
+            <code>
+
+                <span class="indentacao">
+                &lt;script&gt;
+                    
+                    <span class="indentacao">
+                    // pedir para o usuario digitar um numero
+                    <br>
+                    var n1 = prompt("Digite um número: ");
+                    
+                    <br><br>
+                    // converter em numero inteiro
+                    <br>
+                    n1 = parseInt(n1);
+                    
+                    <br><br>
+                    // pedir para o usuario digitar outro numero
+                    <br>
+                    var n2 = prompt("Digite outro número: ");
+                    
+                    <br><br>
+                    // converter em numero inteiro
+                    <br>
+                    n2 = parseInt(n2);
+                                
+                    <br><br>
+                    // mostrar num alert o seguinte texto o resto da divisão de (n1) por (n2) é: (resultado); 
+                    <br>
+                    alert("o resto da divisão de " + n1 + " por " + n2 + " é: " + (n1%n2));
+                    
+                    <br><br>
+                    // mostrar num alert o seguinte texto o numero (n1) elevado a (n2) é: (resultado); 
+                    <br>
+                    alert("o numero " + n1 + " elevado a " + n2 + " é: " + (n1**n2));
+                    </span>
+
+                &lt;/script&gt;
+                </span>
+            </code>
+        </section>
 
 
 
@@ -41,47 +391,44 @@
             <h3>Operadores aritméticos - Módulo (Resto da divisão)</h3>            
 
             <code>
+
+                <span class="indentacao">
                 &lt;script&gt;
-                    <br>&nbsp;&nbsp;&nbsp;&nbsp;
-                    <br>&nbsp;&nbsp;&nbsp;&nbsp;
-                    //apresentar o resto da divisão de dois numeros
                     
-                    <br>&nbsp;&nbsp;&nbsp;&nbsp;
-                    var num1 = parseInt(prompt("Digite o primeiro número da divisão:"));
-                    <br>&nbsp;&nbsp;&nbsp;&nbsp;
-                    var num2 = parseInt(prompt("Digite o segundo número da divisão:"));
-                    
-                    <br>&nbsp;&nbsp;&nbsp;&nbsp;
-                    <br>&nbsp;&nbsp;&nbsp;&nbsp;
-                    var restoDivisao = num1 % num2;
-                    <br>&nbsp;&nbsp;&nbsp;&nbsp;
-                    <br>&nbsp;&nbsp;&nbsp;&nbsp;
-                    alert(restoDivisao);
-                    <br>&nbsp;&nbsp;&nbsp;&nbsp;
-                <br>&lt;/script&gt;
+                    <span class="indentacao">
+                        // apresentar o resto da divisão de dois numeros
+                        <br>
+                        var num1 = parseInt(prompt("Digite o primeiro número da divisão:"));
+                        <br>
+                        var num2 = parseInt(prompt("Digite o segundo número da divisão:"));
+                        <br>
+                        var restoDivisao = num1 % num2;
+                        <br><br>
+                        alert("O resto da divisão de " + num1 + " / " + num2 + " é = " + restoDivisao);
+                    </span>
+                &lt;/script&gt;
+                </span>
             </code>
 
             <h3>Operadores aritméticos - Exponenciação</h3>
 
             <code>
+                <span class="indentacao">
                 &lt;script&gt;
-                    <br>&nbsp;&nbsp;&nbsp;&nbsp;
-                    <br>&nbsp;&nbsp;&nbsp;&nbsp;
-                    //apresentar a exponeciação de dois numeros
                     
-                    <br>&nbsp;&nbsp;&nbsp;&nbsp;
-                    var num1 = parseInt(prompt("Digite o primeiro número:"));
-                    <br>&nbsp;&nbsp;&nbsp;&nbsp;
-                    var num2 = parseInt(prompt("Digite o segundo número:"));
-                    
-                    <br>&nbsp;&nbsp;&nbsp;&nbsp;
-                    <br>&nbsp;&nbsp;&nbsp;&nbsp;
-                    var exponeciacao = num1 ** num2;
-                    <br>&nbsp;&nbsp;&nbsp;&nbsp;
-                    <br>&nbsp;&nbsp;&nbsp;&nbsp;
-                    alert(exponeciacao);
-                    <br>&nbsp;&nbsp;&nbsp;&nbsp;
-                <br>&lt;/script&gt;
+                    <span class="indentacao">
+                        // apresentar a exponeciação de dois numeros
+                        <br>
+                        var num1 = parseInt(prompt("Digite o primeiro número:"));
+                        <br>
+                        var num2 = parseInt(prompt("Digite o segundo número:"));
+                        <br>
+                        var exponeciacao = num1 ** num2;
+                        <br><br>
+                        alert(exponeciacao);
+                    </span>     
+                &lt;/script&gt;
+                </span>
             </code>
 
         </section>
@@ -153,41 +500,38 @@
                 <p class="paragrafoDicaDeOuro">
                     Em situações onde há mais de uma operação aritmética acontecendo, 
                     deve-se atentar na prioridade de cada uma.
-                    <br>
+                    
                     Exemplo: var media = n1 + n2 / 2;
-                    <br>
+                    
                     Neste caso primeiro será realizado a divisão pois esta operação tem prioridade sobre a operação de soma.
-                    <br>
+                    
                     Para corrigir use parenteses dessa forma:
-                    <br>
+                    
                     var media = (n1 + n2) / 2;
-                    <br>
+                    
                     Assim, primeiro são resolvidas as expressões mais encapsuladas até chegar no menor nível de encapsulamento.
                 </p>
 
             </article>
 
             <code>
+
+                <span class="indentacao">
                 &lt;script&gt;
-                    <br>&nbsp;&nbsp;&nbsp;&nbsp;
-                    <br>&nbsp;&nbsp;&nbsp;&nbsp;
-                    //pedir para o usuario digitar dois numero
-                    <br>&nbsp;&nbsp;&nbsp;&nbsp;
-                    var num1 = parseFloat(prompt("Digite o primeiro número"));
-        
-                    <br>&nbsp;&nbsp;&nbsp;&nbsp;
-                    <br>&nbsp;&nbsp;&nbsp;&nbsp;
-                    var num2 = parseFloat(prompt("Digite o segundo número"));
-
-                    <br>&nbsp;&nbsp;&nbsp;&nbsp;
-                    <br>&nbsp;&nbsp;&nbsp;&nbsp;
-                    var media = (num1 + num2) / 2;
-
-                    <br>&nbsp;&nbsp;&nbsp;&nbsp;
-                    <br>&nbsp;&nbsp;&nbsp;&nbsp;
-                    alert("A média é: " + media);
-                    <br>&nbsp;&nbsp;&nbsp;&nbsp;
-                <br>&lt;/script&gt;
+                    
+                    <span class="indentacao">
+                        // pedir para o usuario digitar dois numero
+                        <br>
+                        var num1 = parseFloat(prompt("Digite o primeiro número"));
+                        <br>
+                        var num2 = parseFloat(prompt("Digite o segundo número"));
+                        <br>
+                        var media = (num1 + num2) / 2;
+                        <br><br>
+                        alert("A média é: " + media);
+                    </span>    
+                &lt;/script&gt;
+                </span>
             </code>
         </section>
 
@@ -200,56 +544,52 @@
             <h3>Aula 02.02</h3>
 
             <code>
-                &lt;script&gt;
-                    <br>&nbsp;&nbsp;&nbsp;&nbsp;
-                    <br>&nbsp;&nbsp;&nbsp;&nbsp;
-                    //pedir para o usuario digitar um numero
-                    <br>&nbsp;&nbsp;&nbsp;&nbsp;
-                    var num1 = prompt("Digite um número:");
 
-                    <br>&nbsp;&nbsp;&nbsp;&nbsp;
-                    <br>&nbsp;&nbsp;&nbsp;&nbsp;                                            
-                    //converter em numero inteiro
-                    <br>&nbsp;&nbsp;&nbsp;&nbsp;
-                    num1 = parseInt(num1);
+                <span class="indentacao">
+                &lt;script&gt;
                     
-                    <br>&nbsp;&nbsp;&nbsp;&nbsp;
-                    <br>&nbsp;&nbsp;&nbsp;&nbsp;
-                    //pedir para o usuario digitar outro numero
-                    <br>&nbsp;&nbsp;&nbsp;&nbsp;
-                    var num2 = prompt("Digite mais um número:");
-                                
-                    <br>&nbsp;&nbsp;&nbsp;&nbsp;
-                    <br>&nbsp;&nbsp;&nbsp;&nbsp;
-                    //converter em numero inteiro
-                    <br>&nbsp;&nbsp;&nbsp;&nbsp;
-                    num2 = parseInt(num2);            
-                    
-                    <br>&nbsp;&nbsp;&nbsp;&nbsp;
-                    <br>&nbsp;&nbsp;&nbsp;&nbsp;
-                    //mostrar a subtração concatenando com o texto "a subtração é: ..."
-                    <br>&nbsp;&nbsp;&nbsp;&nbsp;
-                    alert("A subtração é: " + (num1-num2));
-                                
-                    <br>&nbsp;&nbsp;&nbsp;&nbsp;
-                    <br>&nbsp;&nbsp;&nbsp;&nbsp;
-                    //mostrar a multiplicação concatenando com o texto "a multiplicação é: ..."
-                    <br>&nbsp;&nbsp;&nbsp;&nbsp;
-                    alert("A multiplixação é: " + (num1*num2));
-                                
-                    <br>&nbsp;&nbsp;&nbsp;&nbsp;
-                    <br>&nbsp;&nbsp;&nbsp;&nbsp;
-                    //mostrar a divisão concatenando com o texto "a divisão é: ..."
-                    <br>&nbsp;&nbsp;&nbsp;&nbsp;
-                    alert("A divisão é: " + (num1/num2));
-                                
-                    <br>&nbsp;&nbsp;&nbsp;&nbsp;
-                    <br>&nbsp;&nbsp;&nbsp;&nbsp;
-                    //mostrar a soma concatenando com o texto "a soma é: ..."
-                    <br>&nbsp;&nbsp;&nbsp;&nbsp;
-                    alert("A soma é: " + (num1+num2));
-                    <br>
-                <br>&lt;/script&gt;
+                    <span class="indentacao">
+                        // pedir para o usuario digitar um numero
+                        <br>
+                        var num1 = prompt("Digite um número:");
+
+                        <br><br>                                            
+                        // converter em numero inteiro
+                        <br>
+                        num1 = parseInt(num1);
+                        
+                        <br><br>
+                        // pedir para o usuario digitar outro numero
+                        <br>
+                        var num2 = prompt("Digite mais um número:");
+                                    
+                        <br><br>
+                        // converter em numero inteiro
+                        <br>
+                        num2 = parseInt(num2);            
+                        
+                        <br><br>
+                        // mostrar a subtração concatenando com o texto "a subtração é: ..."
+                        <br>
+                        alert("A subtração é: " + (num1-num2));
+                                    
+                        <br><br>
+                        // mostrar a multiplicação concatenando com o texto "a multiplicação é: ..."
+                        <br>
+                        alert("A multiplixação é: " + (num1*num2));
+                                    
+                        <br><br>
+                        // mostrar a divisão concatenando com o texto "a divisão é: ..."
+                        <br>
+                        alert("A divisão é: " + (num1/num2));
+                                    
+                        <br><br>
+                        // mostrar a soma concatenando com o texto "a soma é: ..."
+                        <br>
+                        alert("A soma é: " + (num1+num2));
+                    </span>
+                &lt;/script&gt;
+                </span>
             </code>
         </section>
 
@@ -263,29 +603,28 @@
             <h3>Converter "String" em inteiro</h3>
 
             <code>
-                &lt;script&gt;
-                    <br>&nbsp;&nbsp;&nbsp;&nbsp;
-                    <br>&nbsp;&nbsp;&nbsp;&nbsp;
-                    //pedir para o usuário digitar o número
-                    
-                    <br>&nbsp;&nbsp;&nbsp;&nbsp;
-                    var num1 = parseInt(prompt("Digite o primeiro número da soma:"));
-                    
-                    <br>&nbsp;&nbsp;&nbsp;&nbsp;
-                    <br>&nbsp;&nbsp;&nbsp;&nbsp;
-                    //pedir para o usuário digitar o número
-                    
-                    <br>&nbsp;&nbsp;&nbsp;&nbsp;
-                    var num2 = parseInt(prompt("Digite o segundo número da soma:"));
-                    
-                    <br>&nbsp;&nbsp;&nbsp;&nbsp;
-                    <br>&nbsp;&nbsp;&nbsp;&nbsp;
-                    // mostrar a soma 
 
-                    <br>&nbsp;&nbsp;&nbsp;&nbsp;
-                    alert(num1 + num2);
-                <br>&lt;/script&gt;
-            </code><br>&nbsp;&nbsp;&nbsp;&nbsp;
+                <span class="indentacao">
+                &lt;script&gt;
+                    
+                    <span class="indentacao">
+                        // pedir para o usuário digitar o número
+                        <br>
+                        var num1 = parseInt(prompt("Digite o primeiro número da soma:"));
+                        
+                        <br><br>
+                        // pedir para o usuário digitar o número
+                        <br>
+                        var num2 = parseInt(prompt("Digite o segundo número da soma:"));
+                        
+                        <br><br>
+                        // mostrar a soma 
+                        <br>
+                        alert(num1 + num2);
+                    </span>
+                &lt;/script&gt;
+                </span>
+            </code>
 
 
             <article class="dicaDeOuro">
@@ -293,7 +632,7 @@
 
                 <h4 class="subTitutloDicaDeOuro">Lembrete:</h4>
                 <p class="paragrafoDicaDeOuro">
-                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    
                     1 - Todo conteúdo (dado) enviado pelo usuário via interface, 
                     sempre iremos receber como uma "String", portanto nas situações 
                     em que estivermos trabalhando com números devemos sempre 
@@ -301,41 +640,48 @@
                 </p>
 
                 <p class="paragrafoDicaDeOuro">
-                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    
                     2 - Na conversão o comando "parseInt()" sempre descarta os valores decimais,
-                    <br><strong>IMPORTENTE</strong> não é um arredondamento e sim o descarte dos decimais.
+                    <strong>IMPORTENTE</strong> não é um arredondamento e sim o descarte dos decimais.
 
 
                 </p>
 
                 <h4 class="subTitutloDicaDeOuro">Dica de Ouro:</h4>
                 <p class="paragrafoDicaDeOuro">
-                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    
                     Para identificar o tipo do dado que estamos trabalhando use o comando 
                     'typeof' seguido do nome da variável.
                     <code class="exemplo">
-                        Exemplo: <br>
-                        &lt;script&gt;    
-                            
-                            // Identificar o tipo do dado que estamos trabalhando
-                            <br>&nbsp;&nbsp;&nbsp;&nbsp;
-                            var valor = prompt("Digite um número:");
-                            <br>&nbsp;&nbsp;&nbsp;&nbsp;
-                            alert(typeof valor);
-                        <br>&lt;/script&gt;
-                        
-                        <br><br>Resultado:
-                        
-                        <br><br>&nbsp;&nbsp;&nbsp;&nbsp;
-                        var valor = prompt("Digite um número:");
-                        <br><br>
-                        <img src="img/aula002_img01_DigiteUmNumero.png"> 
-                        
-                        <br>&nbsp;&nbsp;&nbsp;&nbsp;
-                        alert(typeof valor);
-                        <br><br>
-                        <img src="img/aula002_img02_TipoDoDado.png">
 
+                        <span class="indentacao">
+                            Exemplo: 
+                            <span class="indentacao">
+                                &lt;script&gt;    
+                                    <span class="indentacao">
+                                        // Identificar o tipo do dado que estamos trabalhando
+                                        <br>
+                                        var valor = prompt("Digite um número:");
+                                        <br>
+                                        alert(typeof valor);
+                                    </span>
+                                &lt;/script&gt;
+                                
+                                <br><br>
+                                Resultado:
+                                
+                                <span class="indentacao">
+                                    var valor = prompt("Digite um número:");
+                                    <br><br>
+                                    <img src="img/aula002_img01_DigiteUmNumero.png"> 
+                                    
+                                    <br><br>
+                                    alert(typeof valor);
+                                    <br>
+                                    <img src="img/aula002_img02_TipoDoDado.png">
+                                </span>
+                            </span>
+                        </span>
                     </code>
                             
                 </p>
@@ -390,12 +736,16 @@
             <article>
                 <p>Code:</p>
                 <code>
-                    &lt;script&gt;
-                        <br>&nbsp;&nbsp;&nbsp;&nbsp;
-                        var nome = prompt("Qual seu nome?"); 
-                        <br>&nbsp;&nbsp;&nbsp;&nbsp;
-                        alert("Seja bem vindo " + nome);
-                    <br>&lt;/script&gt;
+                    <span class="indentacao">
+                        &lt;script&gt;
+                        <span class="indentacao">
+                            var nome = prompt("Qual seu nome?"); 
+                            <br>    
+                            alert("Seja bem vindo " + nome);
+                            </span>
+
+                        &lt;/script&gt;
+                    </span>
                 </code>
     
             </article>
@@ -409,9 +759,81 @@
                 <img src="img/aula001_img02_alertInformaNomeUsuario.png">
             </article>
 
-            
         </section>
         
+         
+        <section>
+            <h2>Links importantes</h2>
+            <hr>
+            
+            <ul>
+                <li><a href="https://www.homehost.com.br/blog/tutoriais/caracteres-especiais-acentos-html/" target="blank">Caracteres especiais</a></li>
+            </ul>
+            
+        </section>
+
+        <section>
+            <h2>Anotações importantes (cola)</h2>
+            <h2> *** - Códigos base para otimização de tempo - ***</h2>
+            <hr>
+            
+            <code>
+                <p>Declarar arquivo CSS no HTML</p>
+                <span class="indentacao">
+                    &lt;link href="style.css" rel="stylesheet"&gt;
+                </span>
+
+                <p>Tabela simples</p>
+                
+                <span class="indentacao">
+                    &lt;table&gt;
+                        
+                        <span class="indentacao">
+                            &lt;thead&gt;
+                                
+                                <span class="indentacao">
+                                    &lt;tr&gt;
+                                        
+                                        <span class="indentacao">
+                                            &lt;th&gt;
+                                            Coluna1
+                                            &lt;/th&gt;
+                                            <br>
+                                            &lt;th&gt;
+                                            Coluna2
+                                            &lt;/th&gt;
+                                        </span>
+                                    &lt;/tr&gt;
+                                </span>
+                            &lt;/thead&gt;
+                        </span>
+                        
+                        <span class="indentacao">
+                            &lt;tbody&gt;
+                                <span class="indentacao">
+                                    &lt;tr&gt;
+                                        <span class="indentacao">
+                                            &lt;th&gt;
+                                            Coluna1
+                                            &lt;/th&gt;
+
+                                            <br>
+
+                                            &lt;th&gt;
+                                            Coluna2
+                                            &lt;/th&gt;
+                                        </span>
+                                    &lt;/tr&gt;
+                                </span>                            
+                            &lt;/tbody&gt;
+                        </span>
+                    &lt;/table&gt;
+                </span>
+            </code>
+
+            
+        </section>
+
 
 
     </body>

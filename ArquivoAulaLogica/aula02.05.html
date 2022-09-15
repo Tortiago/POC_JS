@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lógica de programação Javascript</title>
+        <meta charset="uft-8">
+    </head>
+    <body>
+        <h1>Lógica de programação com Javascript</h1>
+
+        <p>
+            PROBLEMA: 
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;
+            Pedir para o usuário digitar dois números e mostrar uma mensagem
+            informando se foi aprovado ou não. Anota de corte é 5.
+        </p>
+
+        <script>
+            var n1 = parseInt(prompt("Digite um número:"));
+            var n2 = parseInt(prompt("Digite outro número:"));
+            var media = (n1+n2)/2;
+            var mensagem = null;
+
+            if(media>5){
+                mensagem = "Parabéns, você foi aprovado já pode comemorar, uhulllll !!!";
+            }else{
+                mensagem = "Que pena não foi dessa vez, continue tentando essa foi por pouco, estamos torcendo por você.";
+            }
+            alert(mensagem);
+
+        </script>
+    </body>
+</html>
